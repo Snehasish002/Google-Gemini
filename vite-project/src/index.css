@@ -1,0 +1,17 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", system-ui;
+  
+}
+
+#root{
+  min-height: 100vh;
+  display: flex;
+}
+
+body{
+  background: #1E201E;
+}
+
