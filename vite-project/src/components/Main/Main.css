@@ -1,8 +1,9 @@
 .main {
     flex: 1;
     min-height: 100vh;
-    padding-bottom: 15vh;
+    padding-bottom: 25vh;
     position: relative;
+    margin-left: 11vh;
 }
 
 .main .nav {
@@ -17,4 +18,109 @@
 .main .nav img{
     width: 40px;
     border-radius: 50%;
+}
+
+.main-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.main .greet{
+    margin: 50px 0px;
+    font-size: 56px;
+    font-weight: 500;
+    padding: 20px;
+    color: #ECDFCC;
+}
+
+.main .greet span{
+    background: -webkit-linear-gradient(16deg, #80d4ff,#ffc46c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main .cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.main .card {
+    height: 200px;
+    padding: 15px;
+    background-color: #3f463d;
+    color: #ffd0d0d6;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+.main .card i{
+    width: 35px;
+    padding: 5px;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.663);
+    bottom: 10px;
+    right: 10px;
+}
+
+.main .card p{
+    font-size: 17px;
+}
+
+.main .card:hover {
+    background-color: #343732;
+}
+
+.main-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-width: 900px;
+    padding: 0px 20px;
+    margin: auto;
+    padding-left: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #30302f;
+    padding: 10px 20px;
+    border-radius: 50px;
+
+    
+}
+
+.search-box i {
+    width: 24px;
+    color: rgb(120, 120, 120);
+    cursor: pointer;
+}
+
+.search-box input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.search-box div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.main .bottom-info {
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+    color: #787878;
+
 }
