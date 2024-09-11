@@ -1,4 +1,4 @@
-import 'dotenv/config';
+// import 'dotenv/config';
 // import { GoogleGenerativeAI } from '@google/generative-ai';
 
 /*
@@ -8,14 +8,14 @@ import 'dotenv/config';
  */
 
 // import { HarmBlockThreshold, HarmCategory } from "@google/generative-ai";
-const {
+import {
   GoogleGenerativeAI,
   HarmCategory,
   HarmBlockThreshold,
-} = require("@google/generative-ai");
+} from "@google/generative-ai";
 
 const MODEL_NAME = "gemini-1.5-flash";
-const API_KEY = process.env.GEMINI_API_KEY;
+const API_KEY = "AIzaSyCTuyA4cvorhqyv9aQcKmZet8OqAlgiKzw";
 
 async function runChat( prompt ) {
   const genAI = new GoogleGenerativeAI(API_KEY);
