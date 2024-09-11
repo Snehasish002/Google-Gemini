@@ -17,7 +17,7 @@ const {
 const MODEL_NAME = "gemini-1.5-flash";
 const API_KEY = process.env.GEMINI_API_KEY;
 
-async function runChat() {
+async function runChat( prompt ) {
   const genAI = new GoogleGenerativeAI(API_KEY);
   const model = genAI.getGenerativeModel({ model: MODEL_NAME, });
 
@@ -48,9 +48,9 @@ async function runChat() {
     ],
   });
 
-  const result = await chatSession.sendMessage("INSERT_INPUT_HERE");
+  const result = await chatSession.sendMessage(prompt);
   const response = result.response;
   console.log(response.text());
 }
 
-runChat();
+export default runChat;
