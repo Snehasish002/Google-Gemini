@@ -38,9 +38,9 @@ const Main = () => {
           <div className="search-box">
             <input type="text" placeholder="Enter prompt here" />
             <div>
-              <i class="fa-regular fa-images"></i>
-              <i class="fa-solid fa-microphone"></i>
-              <i class="fa-regular fa-paper-plane"></i>
+              <i className="fa-regular fa-images"></i>
+              <i className="fa-solid fa-microphone"></i>
+              <i className="fa-regular fa-paper-plane"></i>
             </div>
           </div>
           <p className="bottom-info">
