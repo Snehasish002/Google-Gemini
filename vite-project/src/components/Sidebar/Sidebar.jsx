@@ -5,6 +5,15 @@ import { Context } from "../../context/Context";
 const Sidebar = () => {
   const [extended, setExtended] = useState(false);
   const { onSent, prevPrompt, setRecentPrompt } = useContext(Context);
+
+  const loadPrompt = async (prompt) => {
+
+    setRecentPrompt(prompt)
+    await onSent(prompt)
+  }
+
+
+
   const clickMenu = () => {
     setExtended((prev) => !prev);
   };
@@ -22,7 +31,7 @@ const Sidebar = () => {
             <p className="recent-title">Recent</p>
             {prevPrompt.map((item, index) => {
               return (
-                <div className="recent-entry">
+                <div onClick={() => loadPrompt(item)} className="recent-entry">
                   <i className="fa-regular fa-message"></i>
                   <p>{item.slice(0,18)} ....</p>
                 </div>
