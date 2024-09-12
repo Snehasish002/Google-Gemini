@@ -56,16 +56,18 @@ const Main = () => {
             </div>
             <div className="result-data">
               <img src={assets.gemini_icon} alt="" />
-              {loading ? 
+              {loading ? (
                 <div className="loader">
                   <hr />
                   <hr />
                   <hr />
-
                 </div>
-               : 
-                <p className="recent-para" dangerouslySetInnerHTML={{ __html: resultData }}></p>
-              }
+              ) : (
+                <p
+                  className="recent-para"
+                  dangerouslySetInnerHTML={{ __html: resultData }}
+                ></p>
+              )}
             </div>
           </div>
         )}
@@ -81,10 +83,18 @@ const Main = () => {
             <div>
               <i className="fa-regular fa-images"></i>
               <i className="fa-solid fa-microphone"></i>
-              <i
-                onClick={() => onSent()}
-                className="fa-regular fa-paper-plane"
-              ></i>
+              {input ? (
+                <i
+                  onClick={() => onSent()}
+                  className="fa-regular fa-paper-plane"
+                ></i>
+              ) : (
+                <i
+                  onClick={() => onSent()}
+                  style={{opacity:0.3}}
+                  className="fa-regular fa-paper-plane"
+                ></i>
+              )}
             </div>
           </div>
           <p className="bottom-info">

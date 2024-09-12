@@ -35,7 +35,7 @@
 
 .main .greet span {
   background: -webkit-linear-gradient(16deg, #80d4ff, #ffc46c);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -213,4 +213,25 @@
         gap: 5px;
     }
 
+    .result-data {
+        padding: 20px;
+    }
+
+    .result-data img {
+        width: 30px;
+    }
+
+    .result-title {
+        margin-left: 1.2rem;
+    }
+
+    .result-title img {
+        width: 30px;
+    }
+
+    .result .recent-title {
+        
+        font-size: 3.5vh;
+      
+      }
 }
