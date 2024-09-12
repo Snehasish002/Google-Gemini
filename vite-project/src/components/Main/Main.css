@@ -141,6 +141,9 @@
 
 .result .recent-para {
   color: #cfdbd0;
+  font-size: 17px;
+  font-weight: 300;
+  list-style: 1.8;
 }
 
 .result-title {
@@ -190,3 +193,4 @@
     background-position: 800px 0;
   }
 }
+
