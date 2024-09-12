@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Sidebar.css";
-import { assets } from "../../assets/assets";
+import { Context } from "../../context/Context";
 
 const Sidebar = () => {
   const [extended, setExtended] = useState(false);
-  
+  const { onSent, prevPrompt, setRecentPrompt } = useContext(Context);
   const clickMenu = () => {
-    setExtended(prev => !prev)
-  }
+    setExtended((prev) => !prev);
+  };
 
   return (
     <div className="sidebar">
       <div className="top">
-        <i  onClick={clickMenu} className="fa-solid menu fa-bars"></i>
+        <i onClick={clickMenu} className="fa-solid menu fa-bars"></i>
         <div className="new-chat">
           <i className="fa-solid fa-plus"></i>
           {extended ? <p>New Chat</p> : null}
@@ -20,10 +20,14 @@ const Sidebar = () => {
         {extended ? 
           <div className="recent">
             <p className="recent-title">Recent</p>
-            <div className="recent-entry">
-              <i className="fa-regular fa-message"></i>
-              <p>What is react...</p>
-            </div>
+            {prevPrompt.map((item, index) => {
+              return (
+                <div className="recent-entry">
+                  <i className="fa-regular fa-message"></i>
+                  <p>{item.slice(0,18)} ....</p>
+                </div>
+              );
+            })}
           </div>
          : null}
       </div>
