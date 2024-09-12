@@ -4,7 +4,7 @@ import { Context } from "../../context/Context";
 
 const Sidebar = () => {
   const [extended, setExtended] = useState(false);
-  const { onSent, prevPrompt, setRecentPrompt } = useContext(Context);
+  const { onSent, prevPrompt, setRecentPrompt, newChat } = useContext(Context);
 
   const loadPrompt = async (prompt) => {
 
@@ -22,7 +22,7 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="top">
         <i onClick={clickMenu} className="fa-solid menu fa-bars"></i>
-        <div className="new-chat">
+        <div onClick={() => newChat()} className="new-chat">
           <i className="fa-solid fa-plus"></i>
           {extended ? <p>New Chat</p> : null}
         </div>

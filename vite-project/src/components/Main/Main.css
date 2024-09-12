@@ -3,7 +3,7 @@
   min-height: 100vh;
   padding-bottom: 25vh;
   position: relative;
-  margin-left: 15vh;
+  /* margin-left: 15vh; */
 }
 
 .main .nav {
@@ -194,3 +194,23 @@
   }
 }
 
+
+@media (max-width: 600px) {
+    .main-bottom input{
+        flex: none;
+        width: 150px;
+    }
+
+    .main-bottom img{
+        width: 20px;
+    }
+
+    .search-box {
+        padding: 5px 10px;
+    }
+
+    .search-box div{
+        gap: 5px;
+    }
+
+}
