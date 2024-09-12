@@ -21,7 +21,7 @@ const Main = () => {
         <img src={assets.user_icon} alt="" />
       </div>
       <div className="main-container">
-        {!showResult ? 
+        {!showResult ? (
           <>
             <div className="greet">
               <p>
@@ -48,18 +48,27 @@ const Main = () => {
               </div>
             </div>
           </>
-         : 
+        ) : (
           <div className="result">
             <div className="result-title">
               <img src={assets.user_icon} alt="" />
-              <p>{recentPrompt}</p>
+              <p className="recent-title">{recentPrompt}</p>
             </div>
             <div className="result-data">
               <img src={assets.gemini_icon} alt="" />
-              <p dangerouslySetInnerHTML={{__html:resultData}}></p>
+              {loading ? 
+                <div className="loader">
+                  <hr />
+                  <hr />
+                  <hr />
+
+                </div>
+               : 
+                <p className="recent-para" dangerouslySetInnerHTML={{ __html: resultData }}></p>
+              }
             </div>
           </div>
-        }
+        )}
 
         <div className="main-bottom">
           <div className="search-box">
