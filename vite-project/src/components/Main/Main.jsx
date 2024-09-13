@@ -39,11 +39,11 @@ const Main = () => {
                 <i className="fa-regular fa-lightbulb"></i>
               </div>
               <div className="card">
-                <p>Suggest beautiful places to see on an upcoming road trip</p>
+                <p>Top frontend interview questions ?</p>
                 <i className="fa-regular fa-message"></i>
               </div>
               <div className="card">
-                <p>Suggest beautiful places to see on an upcoming road trip</p>
+                <p>What is Front-end dev ?</p>
                 <i className="fa-solid fa-code"></i>
               </div>
             </div>
