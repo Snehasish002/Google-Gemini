@@ -31,7 +31,7 @@ const Main = () => {
             </div>
             <div className="cards">
               <div className="card">
-                <p>Suggest beautiful places to see on an upcoming road trip</p>
+                <p>Best places to visit in india</p>
                 <i className="fa-regular fa-compass"></i>
               </div>
               <div className="card">
