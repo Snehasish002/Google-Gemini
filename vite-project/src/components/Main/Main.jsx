@@ -31,11 +31,11 @@ const Main = () => {
             </div>
             <div className="cards">
               <div className="card">
-                <p>Best places to visit in india</p>
+                <p>Best places to visit in india.</p>
                 <i className="fa-regular fa-compass"></i>
               </div>
               <div className="card">
-                <p>Suggest beautiful places to see on an upcoming road trip</p>
+                <p>Explain React native.</p>
                 <i className="fa-regular fa-lightbulb"></i>
               </div>
               <div className="card">
@@ -43,7 +43,7 @@ const Main = () => {
                 <i className="fa-regular fa-message"></i>
               </div>
               <div className="card">
-                <p>What is Front-end dev ?</p>
+                <p>What is React ?</p>
                 <i className="fa-solid fa-code"></i>
               </div>
             </div>
